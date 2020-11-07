@@ -17,6 +17,7 @@ class CreateLaraProduct extends Migration
             $table->id();
             $table->string('product_name')->comment('商品名称');
             $table->timestamps();
+
         });
     }
 
