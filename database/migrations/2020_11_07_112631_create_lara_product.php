@@ -15,7 +15,7 @@ class CreateLaraProduct extends Migration
     {
         Schema::create('lara_product', function (Blueprint $table) {
             $table->id();
-            //$table->
+            $table->string('product_name')->comment('商品名称');
             $table->timestamps();
         });
     }
