@@ -27,3 +27,4 @@ Route::get('hello', function () {
 Route::get('/index', 'UserController@index');
 Route::get('/userList', 'UserController@userList');
 Route::get('/userAdd', 'UserController@userAdd');
+Route::get('/userUpdate', 'UserController@userUpdate');
