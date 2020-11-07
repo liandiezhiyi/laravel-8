@@ -26,5 +26,8 @@ class UserController extends Controller
     public function searchUser(){
         return 111111111111;
     }
+    public function test(){
+        return  111;
+    }
 }
 
