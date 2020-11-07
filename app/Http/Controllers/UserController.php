@@ -20,7 +20,9 @@ class UserController extends Controller
     public function userUpdate(){
         return 222222222222222;
     }
-
+    public function  userDel(){
+        return    6666666666666666666;
+    }
     public function searchUser(){
         return 111111111111;
     }
