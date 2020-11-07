@@ -25,5 +25,6 @@ Route::get('hello', function () {
 //Route::get('/user', [UserController::class, 'index']);
 
 Route::get('/user', 'UserController@index');
+Route::get('/user', 'UserController@user');
 Route::get('/index', 'TestController@index');
 Route::get('/test', 'TestController@test');
