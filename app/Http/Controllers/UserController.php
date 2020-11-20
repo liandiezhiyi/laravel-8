@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -11,10 +11,14 @@ class UserController extends Controller
         phpinfo();
     }
     public  function  userList(){
-        return 555555555555555;
+        $data=['name'=>'tang','age'=>'19'];
+       //return view('user/userList',['test'=>'test1111111']);
+       //return view('user/userList',$data);
+       return view('user/userList',compact('data'));
+       // return view("user/userList")->with('data',$data);
     }
     public  function  addUser(){
-        return  33333333333333333;
+        echo  33333333333333333;
     }
 
     public function userUpdate(){

@@ -1,6 +1,6 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +22,40 @@ Route::get('hello', function () {
 
 
 
-//Route::get('/user', [UserController::class, 'index']);
+//空间路由
+/*
+Route::namespace("Admin")->group(function (){
+  //  Route::any("/login",[LoginController::class,'login']);
+    Route::any('login','LoginController@login');
 
+});
+*/
+
+
+
+//空间分组路由
+Route::namespace('Admin')->prefix('admin')->group(function (){
+
+        Route::any('login','LoginController@login');
+        Route::any('login/login','LoginController@login');
+
+        Route::any('login/index','LoginController@index');
+
+
+
+
+        Route::get('index','indexController@index');
+});
+
+
+
+
+
+
+/*
 Route::get('/index', 'UserController@index');
 Route::get('/userList', 'UserController@userList');
 Route::get('/userAdd', 'UserController@userAdd');
 Route::get('/userUpdate', 'UserController@userUpdate');
+    */
+
